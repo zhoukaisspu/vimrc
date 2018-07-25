@@ -18,23 +18,37 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'dracula/vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
+
 filetype plugin indent on
 
 let g:ycm_global_ycm_extra_conf = 'C:/Users/ZhouKai/vimfiles/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
+" NERDTree{{{
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-
-" maping for NERDTree
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<CR>
+" }}}
 
-" defaultmaping 
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap " ""<Esc>i
+"YouCompleteMe {{{
+let g:ycm_key_list_select_completion = ['<Enter>','<Down>']
+let g:ycm_key_list_previous_completion =['<S-TAB>','<Up>']
+"}}}
+
+
+"delimitMate{{{
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+inoremap <expr> <TAB> delimitMate#JumpAny()
+"}}}
+
+" normal mode mapping
+map <space> /
+"map <C-space> ?
+
 let g:vim_markdown_folding_disabled = 1
 syntax on
 color dracula " config theme
