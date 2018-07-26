@@ -19,6 +19,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'dracula/vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 call vundle#end()
 
 filetype plugin indent on
@@ -33,7 +34,25 @@ map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<CR>
 " }}}
 
+"nerdtree-git-plugin{{{
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+"}}}
+
 "YouCompleteMe {{{
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_python_binary_path = 'phthon'
 let g:ycm_key_list_select_completion = ['<Enter>','<Down>']
 let g:ycm_key_list_previous_completion =['<S-TAB>','<Up>']
 "}}}
@@ -47,6 +66,12 @@ inoremap <expr> <TAB> delimitMate#JumpAny()
 
 " normal mode mapping
 map <space> /
+
+"move between windows
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 "map <C-space> ?
 
 let g:vim_markdown_folding_disabled = 1
