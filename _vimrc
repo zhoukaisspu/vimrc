@@ -19,12 +19,31 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'dracula/vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 filetype plugin indent on
 
 let g:ycm_global_ycm_extra_conf = 'C:/Users/ZhouKai/vimfiles/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
+
+
+" normal mode mapping {{{
+let mapleader = ","
+map <space> /
+"map <C-space> ?
+
+"move between windows
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+" }}}
+
+"ctrlp.vim {{{
+let g:ctrlp_map = '<leader>j'
+let g:ctrlp_working_path_mode = 'rw'
+let g:NERDTreeChDirMode = 2
+"}}}
 
 " NERDTree{{{
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -36,8 +55,8 @@ map <leader>nf :NERDTreeFind<CR>
 
 "nerdtree-git-plugin{{{
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
+   \ "Modified"  : "✹",
+   \ "Staged"    : "✚",
     \ "Untracked" : "✭",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "═",
@@ -49,7 +68,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 "}}}
 
-"YouCompleteMe {{{
+""YouCompleteMe {{{
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'phthon'
@@ -64,19 +83,9 @@ let g:delimitMate_expand_space = 1
 inoremap <expr> <TAB> delimitMate#JumpAny()
 "}}}
 
-" normal mode mapping
-map <space> /
-
-"move between windows
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
-"map <C-space> ?
-
 let g:vim_markdown_folding_disabled = 1
 syntax on
-color dracula " config theme
+color dracula  " config theme
 
 set diffexpr=MyDiff()
 function MyDiff()
