@@ -4,6 +4,7 @@ set encoding=utf-8
 set guifont=Consolas:h10
 set nobackup " no backup
 set nu " show line numbers
+set noundofile " no undo file
 
 " manage plugin by Vundle
 filetype off
@@ -29,7 +30,7 @@ let g:ycm_global_ycm_extra_conf = 'C:/Users/ZhouKai/vimfiles/bundle/YouCompleteM
 
 " normal mode mapping {{{
 let mapleader = ","
-map <space> /
+map <leader><space> /
 "map <C-space> ?
 
 "move between windows
@@ -37,6 +38,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
+
+
+nnoremap <leader>+ :vertical resize +
+nnoremap <leader>- :vertical resize -
 " }}}
 
 "ctrlp.vim {{{
