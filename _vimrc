@@ -21,6 +21,7 @@ Plugin 'dracula/vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
 filetype plugin indent on
@@ -85,6 +86,7 @@ let g:ycm_key_list_previous_completion =['<S-TAB>','<Up>']
 "delimitMate{{{
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
+let g:delimitMate_balance_matchpairs = 1
 inoremap <expr> <TAB> delimitMate#JumpAny()
 "}}}
 
