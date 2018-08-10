@@ -50,7 +50,8 @@ nnoremap <leader>- :vertical resize -
 " }}}
 
 "ctrlp.vim {{{
-let g:ctrlp_map = '<leader>f'
+let g:ctrlp_map = '<leader>cf'
+map <leader>cb :CtrlPBuffer<CR>
 let g:ctrlp_working_path_mode = 'rw'
 let g:NERDTreeChDirMode = 2
 "}}}
