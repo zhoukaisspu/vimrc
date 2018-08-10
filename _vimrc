@@ -5,7 +5,6 @@ set guifont=Consolas:h10
 set nobackup " no backup
 set nu " show line numbers
 set noundofile " no undo file
-
 " manage plugin by Vundle
 filetype off
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
@@ -28,6 +27,11 @@ filetype plugin indent on
 
 let g:ycm_global_ycm_extra_conf = 'C:/Users/ZhouKai/vimfiles/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
+"theme setting{{{
+set guioptions-=T
+set background=dark
+color dracula  " config theme
+"}}}
 
 " normal mode mapping {{{
 let mapleader = ","
@@ -46,7 +50,7 @@ nnoremap <leader>- :vertical resize -
 " }}}
 
 "ctrlp.vim {{{
-let g:ctrlp_map = '<leader>j'
+let g:ctrlp_map = '<leader>f'
 let g:ctrlp_working_path_mode = 'rw'
 let g:NERDTreeChDirMode = 2
 "}}}
@@ -92,7 +96,6 @@ inoremap <expr> <TAB> delimitMate#JumpAny()
 
 let g:vim_markdown_folding_disabled = 1
 syntax on
-color dracula  " config theme
 
 set diffexpr=MyDiff()
 function MyDiff()
