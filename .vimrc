@@ -19,6 +19,12 @@ let mapleader = ","
 map <leader><space> /
 "}}}
 
+" move between windows{{{
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>p
+" }}}
 "NERDTree{{{
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark
