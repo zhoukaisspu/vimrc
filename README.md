@@ -19,6 +19,10 @@ Of course, I will keep tweak vim until it make me feel comfortable.
 * Use the `_vimrc` in this repo to overwrite the `defautl _vimrc`
 * enjoy the gvim
 
+### Linux
+
+* move the `.vimrc` file to the `$HOME` directory
+
 ## Plugin
 TODO
 
