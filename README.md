@@ -13,10 +13,11 @@ Of course, I will keep tweak vim until it make me feel comfortable.
 * gvim : VI-Improved 8.1
 
 ## Usage 
-1. Open gvim and then type `:echo $MYVIMRC` in normal mode,`vimrc's path` will
-show in the status line
-2. Use the `_vimrc` in this repo to overwrite yours
-3. enjoy the gvim
+
+### Windows
+* Open gvim and then type `:echo $MYVIMRC` in normal mode,`vimrc's path` will show in the status line
+* Use the `_vimrc` in this repo to overwrite the `defautl _vimrc`
+* enjoy the gvim
 
 ## Plugin
 TODO
