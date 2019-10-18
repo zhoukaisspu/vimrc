@@ -21,7 +21,9 @@ Of course, I will keep tweak vim until it make me feel comfortable.
 
 ### Linux
 
-* move the `.vimrc` file to the `$HOME` directory
+* Check the `$HOME/.vimrc` exist, if not, type the `touch $HOME/.vimrc` to create it
+* Move the `beginner.vim` file to `$HOME` directory
+* Add the `source $HOME/beginner` statement to the `$HOME/.vimrc` file
 
 ## Plugin
 TODO
