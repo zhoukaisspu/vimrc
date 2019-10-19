@@ -21,6 +21,7 @@ Of course, I will keep tweak vim until it make me feel comfortable.
 
 ### Linux
 
+* Run `vim_setup.sh` to create `~/.vim/bundle/Vundle.vim` floder and clone `Vundle.vim.git` 
 * Check the `$HOME/.vimrc` exist, if not, type the `touch $HOME/.vimrc` to create it
 * Move the `beginner.vim` file to `$HOME` directory
 * Add the `source $HOME/beginner` statement to the `$HOME/.vimrc` file
